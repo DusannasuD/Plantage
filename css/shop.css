@@ -1,0 +1,291 @@
+
+header, section, footer, aside, nav, main, article, figure {
+  display: block; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {box-sizing: border-box;}
+
+body {
+  font-size: 100%;
+  font-size-adjust: 0.58;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: grey;
+}
+
+/* Header */
+
+/* Navigation menu */
+#nav {
+  padding-left: 5px;
+  padding-top: 10px;
+  position: sticky;
+  top: 0;
+}
+
+#nav a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.05em;
+  color: grey;
+}
+
+#nav a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+/* Shopping cart */
+#cart {
+  float: right;
+  margin-right: 3%;  
+}
+
+#cart a {
+   background-color: rgb(0, 170, 255);
+   transition: padding-top 1s, padding-bottom 1s, background-color 1s, color 0.1s;
+   color: white;
+}
+
+#cart a:hover {
+  background-color: rgb(128, 212, 255);
+  color: white;
+}
+
+#cart:after {
+  clear: right;
+}
+
+#number {
+  margin-left: 5px;
+}
+
+/* Store */
+#storemenu {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+#storemenu button {
+  border: none;
+  color: grey;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;  
+  background-color: white;
+  font-size: 1.2em;
+  transition: background-color 0.5s;
+}
+
+#storemenu button:hover {
+  background-color: rgb(242, 242, 242);
+  cursor: pointer;
+}
+
+/* Images*/
+.images {
+  margin-top: 5%;
+  margin-left: 12%;
+  margin-right: 12%;
+  padding-bottom: 3%;
+}
+
+#images {
+  opacity: 0;
+}
+
+#illustrations {
+  opacity: 0;
+}
+
+#navigation {
+  opacity: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-bottom: 100px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 15px;
+}
+
+.column img {
+  vertical-align: middle;
+}
+
+.column h3 {
+  color: black;
+  text-align: center;
+}
+
+@media screen and (max-width: 550px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+}
+
+.btn {
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border: none;
+  background-color: rgb(255, 127, 80); 
+  font-size: 1em;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(8%); 
+  color: white;
+  padding: 6px;
+  overflow-y: hidden; 
+}
+
+.container:hover .btn {
+  opacity: 1;
+  cursor: pointer;
+  transform: translateY(0%);
+}
+
+.btn:hover {
+  background-color: rgb(255, 127, 80, 0.8);
+}
+
+.price {
+  text-align: center;
+  margin-bottom: 15%;
+}
+
+/* Shopping cart */
+/* Side container */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 243, 230);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  font-size: 36px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.sidenav .closebtn:hover {
+  color: lightgrey;
+}
+
+body {
+  transition: margin-right .5s;
+}
+/* End side container */
+
+/* Cart container */
+#cartContainer {
+  flex-direction: row;
+  display: none;
+}
+
+.closebtn {
+  color: grey;
+}
+
+.column {
+  flex: 1 1 5px;
+  width: 33.33%;
+  margin: auto;
+  text-align: center;
+}
+
+.remove {
+  color: rgb(255, 102, 102);
+}
+
+.remove:hover {
+  color: rgb(255, 153, 153);
+  cursor: pointer;
+}
+
+.fa:hover {
+  cursor: pointer;
+}
+/* End cart container */
+
+/* Bottom */
+#bottom {
+  color: black;
+  text-align: center;
+  margin-top: 30px; 
+  margin-bottom: 30px;
+}
+
+#bottom button {
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 26px;
+  padding-left: 26px;
+  background-color: rgb(255, 153, 0);
+  color: white; 
+  transition: all 0.3s;
+  margin-top: 5px;
+}
+
+#bottom button:hover {
+  background-color: rgb(255, 194, 102);
+  cursor: pointer;
+}
+/* End button */
+/* End shopping cart */
+
+/* Footer */
+#footer {
+	height: 250px;
+	background-color: powderblue;
+	margin-top: 250px;
+	text-align: center;
+	padding-top: 100px;
+}
+
+#footer i {
+	font-size: 2em;
+	color: white;
+	padding-right: 5px;
+}
+
+#footer i:hover {
+	color: lightgrey;
+}
