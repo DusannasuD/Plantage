@@ -21,14 +21,13 @@
 
   <!-- Navigation bar -->
   <div id="nav">
-    <a href="index.html">HOME</a>
-    <a href="index.html#about"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="index.html#portfolio"><i class="fa fa-th"></i> PORTFOLIO</a>
-     <a href="index.html#contact"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="shop.html"><i class="fa fa-shopping-cart"></i> SHOP</a>
+    <a href="index.html">POCETNA</a>
+    <a href="index.html#about"><i class="fa fa-user"></i> O NAMA</a>
+    <a href="index.html#contact"><i class="fa fa-envelope"></i> KONTAKT</a>
+    <a href="shop.html"><i class="fa fa-shopping-cart"></i> PRODAVNICA</a>
     <a href="blog.html"><i class="fa fa-columns"></i> BLOG</a>
     <div id="cart">
-    <a href="#" onclick="openNav()"><i class="fa fa-cart-plus"></i> Cart<span id="number">0</span></a>
+    <a href="#" onclick="openNav()"><i class="fa fa-cart-plus"></i> Korpa<span id="number">0</span></a>
     </div>
   </div>
   <!-- End navigation bar -->
@@ -41,18 +40,28 @@
 
 <!-- Store -->
 <div id="navigation">
-<h2 style="text-align: center; margin-top: 12%; margin-bottom: 5%;">Plantage Store</h2>
+<!--<h2 style="text-align: center; margin-top: 12%; margin-bottom: 5%;">Plantage Prodavnica</h2>-->
+<img src="images/logo3.jpg" alt="logo" width="50%" style="display: block; margin: auto; margin-top: 200px; margin-bottom: 150px;">
   <!-- Strore menu -->
   <div id="storemenu">
-      <a href="#images"><button style="border-right: 1px solid lightgrey;">Paintings</button></a>
-      <a href="#illustrations"><button style="border-right: 1px solid lightgrey; border-left: 1px solid lightgrey;">Illustrations</button></a>
-      <a href="#vectors"><button style="border-left: 1px solid lightgrey;">Vectors</button></a>
+    <a><button id="cvecara" style="border-right: 1px solid lightgrey;">Cvecara</button></a>
+    <a><button style="border-right: 1px solid lightgrey; border-left: 1px solid lightgrey;">Piljarnica</button></a>
+    <a><button style="border-left: 1px solid lightgrey;">Suveniri</button></a>
+  </div>
+
+  <div class="tabcontent">
+    <a><h4>Printovi</h4></a>
+    <a><h4>Slike</h4></a>
+    <a><h4>Crtezi</h4></a>
+    <a><h4>Desktop/mobile pozadine</h4></a>
+    <a><h4>Vektori</h4></a>
+    <a><h4>Paketi</h4></a>
   </div>
 </div>
   <!-- End store menu -->
 
   <!-- Paintings -->
-  <h3 style="padding-left: 10%;">Paintings</h3>
+  <h3 style="padding-left: 10%; margin-top: 150px;">Cvecara</h3>
   <hr style="width: 90%; margin: auto; border-width: 0.6px">
 
   <div class="images" id="images">
@@ -143,7 +152,7 @@
   <!-- End images -->
 
   <!-- Illustrations -->
-  <h3 style="padding-left: 10%;">Illustrations</h3>
+  <h3 style="padding-left: 10%;">Piljarnica</h3>
   <hr style="width: 90%; margin: auto; border-width: 0.6px">
 
   <div class="images" id="illustrations">    
@@ -212,7 +221,7 @@
   <!-- End illustrations -->
 
   <!-- Vectors -->
-  <h3 style="padding-left: 10%;">Vectors</h3>
+  <h3 style="padding-left: 10%;">Suveniri</h3>
   <hr style="width: 90%; margin: auto; border-width: 0.6px">
 
   <div class="images" id="vectors">
@@ -223,7 +232,7 @@
   <!-- Shopping cart -->
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <h3 style="text-align: center; color: black;">Your cart</h3>
+    <h3 style="text-align: center; color: black;">Vasa korpa</h3>
 
     <div id="cartContainer">
       <div class="column">
@@ -231,7 +240,7 @@
       </div>
 
       <div class="column"> 
-        <p><span style="font-size: 0.75em; color: black;">DZ logo</span><br>
+        <p><span class="cartItemTitle" style="font-size: 0.75em; color: black;">DZ logo 7</span><br>
         <span style="font-size: 0.9em; color: black;" class="itemPrice">1500</span><br>
         </p>
       </div>
@@ -243,7 +252,7 @@
 
     <div id="bottom">
       <h3>Total: <span id="total">0</span></h3>
-      <button id="order">ORDER</button>
+      <button id="order">NARUCI</button>
     </div>
   </div>
   <!-- End shopping cart -->
