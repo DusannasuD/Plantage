@@ -68,7 +68,7 @@ body {
 /* Store */
 #storemenu {
   text-align: center;
-  margin-bottom: 10%;
+  margin-bottom: 20px;
 }
 
 #storemenu button {
@@ -85,6 +85,24 @@ body {
 
 #storemenu button:hover {
   background-color: rgb(242, 242, 242);
+  cursor: pointer;
+}
+
+.tabcontent {
+  background-color: coral;
+  color: white;
+  text-align: center;
+  margin-bottom: 100px;
+  display: none;
+}
+
+.tabcontent a {
+  display: inline-block;
+  padding: 40px 14px;
+}
+
+.tabcontent a:hover {
+  color: lightgrey;
   cursor: pointer;
 }
 
