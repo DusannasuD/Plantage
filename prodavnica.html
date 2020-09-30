@@ -18,7 +18,7 @@
 <body>
 
 <!-- Header -->
-<header>
+<header class="head">
   <!-- Logo -->
   <div id="logo" class="header_content">
     <img src="images/Logo.png" alt="Logo" max-width="100%">
@@ -29,15 +29,15 @@
     <a href="index.html">Početna</a>
     <a href="onama.html">O nama</a>
     <div class="dropdown">
-    <a href="#">Prodavnica <i class="fa fa-angle-down"></i></a>
+    <a href="prodavnica.html">Prodavnica <i class="fa fa-angle-down"></i></a>
       <div class="dropdown_content">
-        <a href="prodavnica.html">Cvećara</a>
-        <a href="#">Piljarnica</a>
-        <a href="#">Rasadnik</a>
+        <a href="cvecara_meni.html">Cvećara</a>
+        <a href="piljarnica_meni.html">Piljarnica</a>
+        <a href="rasadnik.html">Rasadnik</a>
       </div>
     </div>
     <a href="blog.html">Blog</a>
-    <a href="#contact">Kontakt</a>
+    <a href="kontakt.html">Kontakt</a>
     <a href="#" onclick="openNav()"><img src="images/cart.png" alt="Cart icon" max-width="100%"></a>
   </div>
 
@@ -52,24 +52,28 @@
 
     <div class="hero_container">
       <img src="images/logowhite.png" alt="Logo white" max-width="100%">
-      <p style="font-size: 2.44vw; margin-top: 20px; padding-bottom: 300px;"><strong>Prodavnica</strong></p>
+      <p style="font-size: 2.44vw; margin-top: 20px;"><strong>Prodavnica</strong></p>
     </div>
   </div>
 
-  <!-- Store menu -->
-  <ul class="breadcrumb">
-    <li><a href="#" class="current">Cvećara</a></li>
-    <li><a href="#">Piljarnica</a></li>
-    <li><a href="#">Rasadnik</a></li>
-  </ul>
+ <!-- Section 2-->
+  <div id="section2">
 
-  <!-- Gallery -->
-  <div>
-    <div id="section2" class="row">
-    
+    <div class="prodMenu">
+      <a href="cvecara_meni.html"><img src="images/cvecara.png" alt="Cvecara" width="100%"></a>
+      <p>Cvećara</p>
     </div>
 
-    <button id="more">Prikaži više</button>
+    <div id="piljarnica" class="prodMenu">
+      <a href="piljarnica_meni.html"><img src="images/piljarnica.png" alt="Cvecara" width="100%"></a>
+      <p>Piljarnica</p>
+    </div>
+
+    <div class="prodMenu">
+      <a href="rasadnik.html"><img src="images/rasadnik.png" alt="Cvecara" width="100%"></a>
+      <p>Rasadnik</p>
+    </div>
+
   </div>
 
   <!-- Newsletter -->
@@ -92,13 +96,13 @@
   <!-- Newsletter form -->
   <div id="newsletter_form">
     <div id="nform_content">
-      <form action="">
+      <form id="addPost">
         <span class="close_form">&times;</span>
         <h3>Prijavi se za Newsletter</h3><br>
 
         <div class="container forms">
           <input type="text" id="fname" name="firstname" placeholder="Ime i prezime">
-          <input type="text" id="email" name="email" placeholder="Email adresa">
+          <input type="email" id="mail" name="email" placeholder="Email adresa">
         </div>
     
         <div class="container sub">
