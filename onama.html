@@ -18,7 +18,7 @@
 <body>
 
 <!-- Header -->
-<header>
+<header class="head">
   <!-- Logo -->
   <div id="logo" class="header_content">
     <img src="images/Logo.png" alt="Logo" max-width="100%">
@@ -27,17 +27,17 @@
   <!-- Navigation bar -->
   <div id="nav" class="header_content">
     <a href="index.html">Početna</a>
-    <a href="#about">O nama</a>
+    <a href="onama.html">O nama</a>
     <div class="dropdown">
     <a href="#">Prodavnica <i class="fa fa-angle-down"></i></a>
       <div class="dropdown_content">
-        <a href="prodavnica.html">Cvećara</a>
-        <a href="#">Piljarnica</a>
-        <a href="#">Rasadnik</a>
+        <a href="cvecara_meni.html">Cvećara</a>
+        <a href="piljarnica_meni.html">Piljarnica</a>
+        <a href="rasadnik.html">Rasadnik</a>
       </div>
     </div>
     <a href="blog.html">Blog</a>
-    <a href="#contact">Kontakt</a>
+    <a href="kontakt.html">Kontakt</a>
     <a href="#" onclick="openNav()"><img src="images/cart.png" alt="Cart icon" max-width="100%"></a>
   </div>
 
@@ -88,13 +88,13 @@
   <!-- Newsletter form -->
   <div id="newsletter_form">
     <div id="nform_content">
-      <form action="">
+      <form id="addPost">
         <span class="close_form">&times;</span>
         <h3>Prijavi se za Newsletter</h3><br>
 
         <div class="container forms">
           <input type="text" id="fname" name="firstname" placeholder="Ime i prezime">
-          <input type="text" id="email" name="email" placeholder="Email adresa">
+          <input type="email" id="mail" name="email" placeholder="Email adresa">
         </div>
     
         <div class="container sub">
