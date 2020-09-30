@@ -20,16 +20,15 @@ body {
 }
 
 /* Header */
-.header_content {
-  float: left;
-  width: 50%;
-  padding: 30px 0;
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.header_content::after {
-  content: "";
-  clear: both;
-  display: table;
+.header_content {
+  width: 50%;
+  padding: 30px 0;
 }
 
 #logo {
@@ -88,7 +87,7 @@ body {
 #section1 {
   color: white;
   text-align: center;
-  box-sizing: border-box; 
+  position: relative;
 }
 
 #section1 a {
@@ -97,13 +96,9 @@ body {
 
 .hero_container {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.hero_container img {
-  width: 7%;
 }
 
 #prodavnica_btn {
@@ -160,6 +155,15 @@ body {
   margin-left: 12%;
 }
 
+.prodMenu img {
+  transition: all ease 0.2s;
+}
+
+.prodMenu img:hover {
+  box-shadow: 6px 6px 10px rgb(230, 230, 230);
+  border-radius: 12px;
+}
+
 /* About */
 #about {
   margin-top: 80px;
@@ -172,6 +176,7 @@ body {
 }
 
 #about video {
+  width: 400px;
   border-radius: 200px;
   position: absolute;
   top: 50%;
@@ -312,7 +317,7 @@ body {
 
 #nform_content {
   display: block;
-  background-color: rgb(179, 230, 204);
+  background-color: rgb(199, 217, 82);
   width: 60%;
   margin: auto;
   padding: 26px 32px;
@@ -332,7 +337,7 @@ body {
   padding-bottom: 26px;
 }
 
-input[type=text], input[type=submit] {
+input[type=text], input[type=submit], input[type=email] {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
@@ -342,7 +347,7 @@ input[type=text], input[type=submit] {
 }
 
 input[type=submit] {
-  background-color: rgb(76, 175, 80);
+  background-color: rgb(126, 201, 200);
   color: white;
   border: none;
 }
@@ -376,7 +381,7 @@ input[type=submit]:hover {
 }
 
 #footer_nav {
-  margin-bottom: 45px; 
+  margin-bottom: 40px; 
   margin-top: 30px;
   padding-left: 20%;
   color: white;
@@ -403,7 +408,8 @@ input[type=submit]:hover {
 
 #up_btn {
   width: 7%;
-  margin-right: 7%;
+  margin-right: 3%;
+  margin-left: 3%;
 }
 
 #footer_prodavnica:hover {
@@ -420,3 +426,42 @@ input[type=submit]:hover {
 	color: lightgrey;
   cursor: pointer;
 }
+
+/* Lower screens */
+/*@media screen and (max-width: 1440px) {
+  #nav {
+    padding-left: 20px;
+  }
+
+  #about video {
+    width: 350px;
+    left: 30%;
+  }
+
+  #up_btn {
+    width: 8%;
+    margin-right: 3%;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #nav {
+    font-size: 1.10em;
+  }
+
+  #nav a {
+    padding: 6px;
+  }
+  
+  #about video {
+    width: 350px;
+    left: 32%;
+  }
+
+  #up_btn {
+    width: 15%;
+    margin-right: 3%;
+    margin-left: 10%;
+  }
+}*/
