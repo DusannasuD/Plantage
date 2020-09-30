@@ -20,16 +20,15 @@ body {
 }
 
 /* Header */
-.header_content {
-  float: left;
-  width: 50%;
-  padding: 30px 0;
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.header_content::after {
-  content: "";
-  clear: both;
-  display: table;
+.header_content {
+  width: 50%;
+  padding: 30px 0;
 }
 
 #logo {
@@ -88,103 +87,52 @@ body {
 #section1 {
   color: white;
   text-align: center;
+  position: relative; 
+}
+
+#section1 a {
+  text-decoration: none;
 }
 
 .hero_container {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* Store menu */
-ul.breadcrumb {
-  padding: 100px 0;
-  list-style: none;
-  position: relative;
-  text-align: center;
-}
-
-ul.breadcrumb li {
-  display: inline;
-  font-size: 28px;
-}
-
-ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: "/\00a0";
-}
-
-ul.breadcrumb li a {
-  color: rgb(116, 122, 125);
-  text-decoration: none;
-}
-
-ul.breadcrumb li a:hover {
-  color: lightgrey;
-}
-
-ul.breadcrumb li a.current {
-  color: rgb(199, 217, 82);
-}
-
 /* Section 2*/
 #section2 {
-  width: 70%;
-  margin: auto;
-  padding-bottom: 80px;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 300px;
 }
 
-.row {
-  display: -ms-flexbox; 
-  display: flex;
-  -ms-flex-wrap: wrap; 
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-
-.column {
-  -ms-flex: 33.33%; 
-  flex: 33.33%;
-  max-width: 33.33%;
-  padding: 16px 20px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-#more {
-  display: block;
-  margin: auto;
-  border: none; 
-  border-radius: 50px;
-  padding: 6px 25px; 
-  color: white;
+#section2 p {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.875em;
+  padding-top: 12px;
   font-weight: bold;
-  background-color: rgb(199, 217, 82);
-  cursor: pointer;
+  margin-bottom: 80px; 
+}
+
+.prodMenu {
+  display: inline-block;
+}
+
+.prodMenu img {
+  transition: all ease 0.2s;
+}
+
+.prodMenu img:hover {
+  box-shadow: 6px 6px 10px rgb(230, 230, 230);
+  border-radius: 12px;
+}
+
+#piljarnica {
+  margin-right: 12%;
+  margin-left: 12%;
 }
 
 /* Newsletter */
@@ -251,7 +199,7 @@ ul.breadcrumb li a.current {
 
 #nform_content {
   display: block;
-  background-color: rgb(179, 230, 204);
+  background-color: rgb(199, 217, 82);
   width: 60%;
   margin: auto;
   padding: 26px 32px;
@@ -271,7 +219,7 @@ ul.breadcrumb li a.current {
   padding-bottom: 26px;
 }
 
-input[type=text], input[type=submit] {
+input[type=text], input[type=submit], input[type=email] {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
@@ -281,7 +229,7 @@ input[type=text], input[type=submit] {
 }
 
 input[type=submit] {
-  background-color: rgb(76, 175, 80);
+  background-color: rgb(126, 201, 200);
   color: white;
   border: none;
 }
