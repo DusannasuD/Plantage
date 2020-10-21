@@ -6,18 +6,25 @@ if (document.readyState == "loading") {
 }
 
 function ready() {
-  checlLocalStorage();
+  checkLocalStorage();
   productPage();
 }
 
 // Check Local Storege on load and update cart number
-function checlLocalStorage() {
-  let cartNumber = localStorage.getItem("cartNumbers");
-  cartNumber - JSON.parse(cartNumber);
+function checkLocalStorage() {
+  //let cartNumber = localStorage.getItem("cartNumbers");
+  //cartNumber = JSON.parse(cartNumber);
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
   
-  if (cartNumber) {
-    document.getElementById("cart").style.display = "block";
-    document.getElementById("cart").textContent = cartNumber;
+  if (cartItems) {
+    let sum = 0;
+
+    for (let i = 0; i < cartItems.length; i++) {
+      sum += cartItems[i].quan;
+      document.getElementById("cart").style.display = "block";
+      document.getElementById("cart").textContent = sum;
+    }
   }
 }
 
@@ -46,8 +53,8 @@ function productPage() {
 
     <!-- Proizvod -->
       <div class="proizvod">
-        <div>
-          <img src="${data.picture}" max-width="100%" class="picture">
+        <div style="width: 400px; height: auto; overflow: hidden;">
+          <img src="${data.picture}" width="100%" class="picture">
         </div>
 
         <div style="padding: 0 50px;">
@@ -59,8 +66,10 @@ function productPage() {
             <button style="margin-right: 8px; background-color: white; display: flex; flex-direction: row; 
             align-items: center; padding: 3px 20px;">
               <span class="quantity" style="padding-right: 30px; padding-left: 10px;">1</span>
-              <span style= "display: flex; flex-direction: column;"><i class="fa fa-angle-up" style="padding-bottom: 4px;"></i>
-              <i class="fa fa-angle-down"></i></span>
+              <span style= "display: flex; flex-direction: column;">
+                <i class="fa fa-angle-up" style="padding-bottom: 4px;" onclick="quantityUp()"></i>
+                <i class="fa fa-angle-down" onclick="quantityDown()"></i>
+              </span>
             </button>
 
             <a href="korpa.html?id=${data.productId}">
@@ -74,6 +83,10 @@ function productPage() {
           <a href="#" target="_blank"><i class="fa fa-instagram" style="padding-left: 8px;"></i></a>
           <a href="#"><i class="fa fa-twitter" style="padding-left: 8px;"></i></a>
         </div>
+      </div>
+
+      <div style="border: 1px solid coral; width: 400px; height: auto;">
+        
       </div>
 
       <!-- Opis proizvoda -->
@@ -100,22 +113,25 @@ function productPage() {
       <div id="slicni_proizvodi">
         <p style="font-size: 42px; font-weight: bold; color: black; text-align: center;">Slični proizvodi</p>
         <div class="img_row">
-          <div>
-            <img src="${data.picture}" alt="Plantart proizvod" width="90%">
-            <p style="text-align: center; font-weight: bold;">Lorem ipsum</p>
-            <p style="text-align: center; font-weight: bold; color: black;">${data.price},00</p>
+          <div class="similar-prod">
+            <img src="${data.picture}" alt="Plantart proizvod" width="90%" class="pic">
+            <p style="text-align: center; font-weight: bold; font-size: 20px;" class="pt">${data.productName}</p>
+            <p style="text-align: center; font-weight: bold; color: black; font-size: 20px;" class="pp">
+            ${data.price},00</p>
           </div>
 
-          <div>
-            <img src="${data.picture}" alt="Plantart proizvod" width="90%">
-            <p style="text-align: center; font-weight: bold;">Lorem ipsum</p>
-            <p style="text-align: center; font-weight: bold; color: black;">${data.price},00</p>
+          <div class="similar-prod">
+            <img src="${data.picture}" alt="Plantart proizvod" width="90%" class="pic">
+            <p style="text-align: center; font-weight: bold; font-size: 20px;" class="pt">${data.productName}</p>
+            <p style="text-align: center; font-weight: bold; color: black; font-size: 20px;" class="pp">
+            ${data.price},00</p>
           </div>
 
-          <div>
-            <img src="${data.picture}" alt="Plantart proizvod" width="90%">
-            <p style="text-align: center; font-weight: bold;">Lorem ipsum</p>
-            <p style="text-align: center; font-weight: bold; color: black;">${data.price},00</p>
+          <div class="similar-prod">
+            <img src="${data.picture}" alt="Plantart proizvod" width="90%" class="pic">
+            <p style="text-align: center; font-weight: bold; font-size: 20px;" class="pt">${data.productName}</p>
+            <p style="text-align: center; font-weight: bold; color: black; font-size: 20px;" class="pp">
+            ${data.price},00</p>
           </div>
         </div>
 
@@ -130,13 +146,24 @@ function addToCart(id) {
 }
 
 function cartNumbers() {
-  let productNumbers = localStorage.getItem("cartNumbers");
-  productNumbers = parseInt(productNumbers);
+  //let productNumbers = localStorage.getItem("cartNumbers");
+  //productNumbers = parseInt(productNumbers);
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
 
-  if (productNumbers) {
-    localStorage.setItem("cartNumbers", productNumbers + 1);
+  if (cartItems) {
+    let sum = 0;
+
+    for (let i = 0; i < cartItems.length; i++) {
+      sum += cartItems[i].quan;
+      //localStorage.setItem("cartNumbers", sum);
+      document.getElementById("cart").style.display = "block";
+      document.getElementById("cart").textContent = sum;
+    }
   } else {
-    localStorage.setItem("cartNumbers", 1);
+    let number = document.getElementsByClassName("quantity")[0].textContent;
+    document.getElementById("cart").textContent = number;
+    //localStorage.setItem("cartNumbers", number);
   }
 }
 
@@ -172,17 +199,32 @@ function addToLocalStorage(id) {
   totalCost(prodPrice, quan);
 }
 
+// Total cost
 function totalCost(price, quantity) {
   let cartCost = localStorage.getItem("totalCost");
 
   if (cartCost != null) {
     cartCost = parseInt(cartCost);
     localStorage.setItem("totalCost", cartCost + (price * quantity));
-    //document.getElementsByClassName("totalPrice").innerHTML = cartCost + price + ",00";
   } else {
-    localStorage.setItem("totalCost", price);
-    //document.getElementsByClassName("totalPrice").innerHTML = price + ",00";
+    let number = document.getElementsByClassName("quantity")[0].textContent;
+    localStorage.setItem("totalCost", price * number);
   }
+}
+
+// Increase quantity 
+function quantityUp() {
+
+  document.getElementsByClassName("quantity")[0].textContent++;
+
+}
+
+// Decrease quantity
+function quantityDown() {
+  let quantity = document.getElementsByClassName("quantity")[0].textContent;
+
+  if (quantity > 1)
+    document.getElementsByClassName("quantity")[0].textContent--;
 }
 
 //Open tabs on click
@@ -244,3 +286,4 @@ function addPost(e) {
     }
   })
 }
+
