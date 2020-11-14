@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantart</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/index.js" async></script>
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="head">
+  <!-- Logo -->
+  <div id="logo" class="header_content" style="flex-grow: 1;">
+    <img src="images/Logo.png" alt="Logo" max-width="100%">
+  </div>
+
+  <!-- Navigation bar -->
+  <div id="nav" class="header_content" style="flex-grow: 1;">
+    <a href="index.html" class="current">Početna</a>
+    <a href="onama.html">O nama</a>
+    <div class="dropdown">
+    <a href="#">Prodavnica <i class="fa fa-angle-down"></i></a>
+      <div class="dropdown_content">
+        <a href="cvecara_meni.html">Cvećara</a>
+        <a href="piljarnica_meni.html">Piljarnica</a>
+        <a href="rasadnik.html">Rasadnik</a>
+      </div>
+    </div>
+    <a href="blog.html">Blog</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="korpa.html" style="position: relative;"><img src="images/cart.png" alt="Cart icon" max-width="100%">
+    <span id="cart"></span></a>
+  </div>
+
+  <!-- Navigation bar for smaller screens -->
+  <div id="mob-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+    
+    <div class="overlay-content">
+      <a href="index.html" class="active">Početna</a>
+      <a href="onama.html">O nama</a>
+      <div class="dropdown">
+      <a href="#" class="prod" onclick="openSubmenu()">Prodavnica <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown_content">
+          <a href="cvecara_meni.html" style="font-size: 24px;">Cvećara</a>
+          <a href="piljarnica_meni.html" style="font-size: 24px;">Piljarnica</a>
+          <a href="rasadnik.html" style="font-size: 24px;">Rasadnik</a>
+        </div>
+      </div>
+      <a href="blog.html">Blog</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </div>
+
+  <a href="korpa.html" style="position: relative; margin-right: 40px;" class="mob-cart"><img src="images/cart.png" alt="Cart icon" max-width="100%"><span id="cart"></span></a>
+
+  <span class="menu-icon" onclick="openMenu()">&#9776;</span>
+  <!-- End navigation bar dor smaller screens -->
+
+</header>
+<!-- End header -->
+  
+  <!-- Section 1 -->
+  <div id="section1">
+    <img src="images/Hero.jpg" alt="Hero image" width="100%">
+
+    <div class="hero_container">
+      <img src="images/logowhite.png" alt="Logo white" max-width="100%">
+      <p><strong>Lorem ipsum dolor sit amet,<br>
+      consectetur adipiscing elit.</strong></p>
+      <a href="prodavnica.html"><button id="prodavnica_btn">Prodavnica</button></a>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)" style="background-color: white;"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2-->
+  <div id="section2">
+    <img src="images/Logo Green.png" alt="Logo white" max-width="100%">
+    <p>Prodavnica</p>
+
+    <div class="prodMenu">
+      <a href="cvecara_meni.html"><img src="images/cvecara.png" alt="Cvecara" width="100%"></a>
+      <p>Cvećara</p>
+    </div>
+
+    <div id="piljarnica" class="prodMenu">
+      <a href="piljarnica_meni.html"><img src="images/piljarnica.png" alt="Cvecara" width="100%"></a>
+      <p>Piljarnica</p>
+    </div>
+
+    <div class="prodMenu">
+      <a href="rasadnik.html"><img src="images/rasadnik.png" alt="Cvecara" width="100%"></a>
+      <p>Rasadnik</p>
+    </div>
+
+  </div>
+
+  <!-- About -->
+  <div id="about">
+    <!-- Logo animation -->
+    <div style="position: relative;">
+      <div class="about-image">
+  	    <img src="images/about.png" alt="Plantart logo" max-width="100%">
+      </div>
+
+      <video autoplay loop muted playsinline>
+        <source src="images/logoanimation.mp4" type="video/mp4">
+        <source src="images/logoanimation.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+    </div>
+    <!-- End logo animation -->
+
+    <!-- About text -->
+    <div id="about_container2">
+      <img src="images/Logo Green.png" alt="Logo white" max-width="100%">
+      <p style="margin-top: 10px; margin-bottom: 0; font-size: 1.875em;" class="o-nama">O nama</p>
+
+      <div class="about-txt">
+        <p style=" font-weight: normal; color: rgb(116, 122, 125);" class="about-paragraph">Umetnička scena cveta od talentovanih stvaralaca koji često ostaju skriveni od šire javnosti zbog nedostatka platformi za izložbe i prodaju.
+        Digitalna prodajna galerija Plantart stremi da mladim umetnicima sa naših prostora stvori kreativni i edukativni vrt u cilju plasiranja njihovog stvaralaštva</p>
+      </div>
+      
+      <a href="onama.html"><button>Pročitaj više</button></a>
+    </div>
+    <!-- About text -->
+  </div>
+  <!-- End About -->
+
+  <!-- Poslednje vesti -->
+  <div id="poslednjeVesti">
+    <img src="images/Logo green.png" alt="Logo white" class="vesti-logo" style="">
+  	<p class="najnovije-vesti" style="">Najnovije vesti</p>
+
+    <div id="clanci" class="row"> 
+      
+    </div>
+  </div>
+  <!-- End Poslednje vesti -->
+
+  <!-- Newsletter -->
+  <div id="newsletter">
+    <img src="images/Newsletter.jpg" alt="Newsletter" width="100%">
+
+    <div id="newsletter_content">
+      <p>Prijavi se na naš Newsletter</p>
+      <bottom id="newsletter_btn">Pošalji</bottom>
+    </div>
+  </div>
+  <!-- End Newsletter -->
+
+  <!-- Newsletter form -->
+  <div id="newsletter_form">
+    <div id="nform_content">
+      <form id="addPost">
+        <span class="close_form">&times;</span>
+        <h3>Prijavi se za Newsletter</h3><br>
+
+        <div class="container forms">
+          <input type="text" id="fname" name="firstname" placeholder="Ime i prezime">
+          <input type="email" id="mail" name="email" placeholder="Email adresa">
+        </div>
+    
+        <div class="container sub">
+          <input type="submit" value="Prijavi se">
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- End Newsletter form -->
+
+<!-- Footer -->
+  <div id="footer">
+
+    <div id="footer_nav">
+      <div class="fimg">
+        <img src="images/Logo.png" alt="Plantart logo" max-width="100%">
+      </div>
+      
+      <div class="fnav">
+        <a href="index.html">Početna</a>
+        <a href="#about">O nama</a>
+        <a href="prodavnica.html">Prodavnica <i class="fa fa-angle-down"></i></a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+ 
+      <a href="prodavnica.html"><button id="footer_prodavnica">Prodavnica</button></a>
+      <a href="#logo" id="up_btn"><img src="images/Arrow.png" alt="To the top" width="100%"></a>
+    </div>
+
+    <div id="social_media">
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+      <i class="fa fa-linkedin"></i>
+      <i class="fa fa-pinterest-p"></i><br><br>
+    </div>
+  </div>
+ 
+</body>
+</html>
