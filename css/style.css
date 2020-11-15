@@ -627,12 +627,12 @@ input[type=submit]:hover {
   }
 }
 
-@media screen and (max-width: 573px) {
+/*@media screen and (max-width: 573px) {
   header {
     width: 573px;
     height: auto;
   }
-}
+}*/
 /* End Header */
 
 /* Section 1 */
@@ -688,10 +688,10 @@ input[type=submit]:hover {
     margin-top: -5px;
   }
 
-  #section1 img:first-child {
+  /*#section1 img:first-child {
     width: 573px;
     height: auto;
-  }
+  }*/
 }
 
 @media screen and (max-width: 521px) {
@@ -782,12 +782,12 @@ input[type=submit]:hover {
   }
 }
 
-@media screen and (max-width: 573px) {
+/*@media screen and (max-width: 573px) {
   #section2 {
     width: 573px;
     height: auto;
   }
-}
+}*/
 /* End Section 2 */
 
 /* About */ 
@@ -873,12 +873,12 @@ input[type=submit]:hover {
   }
 }
 
-@media screen and (max-width: 573px) {
+/*@media screen and (max-width: 573px) {
   #about {
     width: 573px;
     height: auto;
   }
-}
+}*/
 
 @media screen and (max-width: 425px) {
   #about_container2 button {
@@ -953,9 +953,9 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 573px) {
-  #poslednjeVesti {
+  /*#poslednjeVesti {
     width: 573px;
-  }
+  }*/
 
   .column {
     padding: 0 40px;
@@ -1099,11 +1099,11 @@ input[type=submit]:hover {
   }
 }
 
-@media screen and (max-width: 573px) {
+/*@media screen and (max-width: 573px) {
   #newsletter {
     width: 573px;
   }
-}
+}*/
 
 @media screen and (max-width: 425px) {
   #newsletter_btn {
@@ -1243,11 +1243,11 @@ input[type=submit]:hover {
   }
 }
 
-@media screen and (max-width: 573px) {
+/*@media screen and (max-width: 573px) {
   #footer {
     width: 573px;
   }
-}
+}*/
 
 @media screen and (max-width: 425px) {
   #footer_nav {
