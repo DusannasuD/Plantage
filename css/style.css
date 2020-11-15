@@ -674,7 +674,7 @@ input[type=submit]:hover {
   }
 }
 
-@media screen and (max-width: 573px) {
+/*@media screen and (max-width: 573px) {
   .hero_container {
     left: 286px;
   }
@@ -688,11 +688,11 @@ input[type=submit]:hover {
     margin-top: -5px;
   }
 
-  /*#section1 img:first-child {
+  #section1 img:first-child {
     width: 573px;
     height: auto;
-  }*/
-}
+  }
+}*/
 
 @media screen and (max-width: 521px) {
   .hero_container img:first-child {
@@ -952,15 +952,15 @@ input[type=submit]:hover {
   }
 }
 
-@media screen and (max-width: 573px) {
-  /*#poslednjeVesti {
+/*@media screen and (max-width: 573px) {
+  #poslednjeVesti {
     width: 573px;
-  }*/
+  }
 
   .column {
     padding: 0 40px;
   }
-}
+}*/
 
 @media screen and (max-width: 425px) {
   .vesti-logo {
