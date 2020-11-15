@@ -47,10 +47,10 @@ function getProducts() {
         article += `
           <div class="column">
             <img src="${item.image}" alt="Blog image" width="100%">
-            <p style="font-size: 1.125em; margin-top: 30px;">${item.date}</p>
-            <p style="font-size: 1.75em; font-weight: bold; color: black; margin-top: 0; margin-bottom: 10px;">${item.title}</p>
-            <div style="height: 100px; overflow: hidden; margin-bottom: 30px;">
-              <p style="font-size: 1.25em;">${item.text}</p>
+            <p>${item.date}</p>
+            <p>${item.title}</p>
+            <div>
+              <p>${item.text}</p>
             </div>
             <a href="blog_article.html?id=${item.blogId}" onclick="openArticle(${item.blogId})">
               <p>PROČITAJ VIŠE</p>
@@ -137,9 +137,3 @@ function addPost(e) {
     }
   })
 }
-
-
-
-
-
-
