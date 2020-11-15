@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale-1">
 <title>Plantart</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -56,6 +56,9 @@
       </div>
       <a href="blog.html">Blog</a>
       <a href="kontakt.html">Kontakt</a>
+      <a href="korpa.html" style="position: relative; margin-right: 40px;" class="dropdown-mob-cart">
+        <img src="images/cart.png" alt="Cart icon" max-width="100%"><span id="cart"></span>
+      </a>
     </div>
   </div>
 
@@ -77,7 +80,7 @@
       consectetur adipiscing elit.</strong></p>
       <a href="prodavnica.html"><button id="prodavnica_btn">Prodavnica</button></a>
 
-      <div style="text-align:center">
+      <div class="dots" style="text-align:center">
         <span class="dot" onclick="currentSlide(1)" style="background-color: white;"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
         <span class="dot" onclick="currentSlide(3)"></span> 
@@ -126,10 +129,10 @@
     <!-- About text -->
     <div id="about_container2">
       <img src="images/Logo Green.png" alt="Logo white" max-width="100%">
-      <p style="margin-top: 10px; margin-bottom: 0; font-size: 1.875em;" class="o-nama">O nama</p>
+      <p class="onama">O nama</p>
 
       <div class="about-txt">
-        <p style=" font-weight: normal; color: rgb(116, 122, 125);" class="about-paragraph">Umetnička scena cveta od talentovanih stvaralaca koji često ostaju skriveni od šire javnosti zbog nedostatka platformi za izložbe i prodaju.
+        <p>Umetnička scena cveta od talentovanih stvaralaca koji često ostaju skriveni od šire javnosti zbog nedostatka platformi za izložbe i prodaju.
         Digitalna prodajna galerija Plantart stremi da mladim umetnicima sa naših prostora stvori kreativni i edukativni vrt u cilju plasiranja njihovog stvaralaštva</p>
       </div>
       
@@ -141,8 +144,8 @@
 
   <!-- Poslednje vesti -->
   <div id="poslednjeVesti">
-    <img src="images/Logo green.png" alt="Logo white" class="vesti-logo" style="">
-  	<p class="najnovije-vesti" style="">Najnovije vesti</p>
+    <img src="images/Logo green.png" alt="Logo white" class="vesti-logo">
+  	<p class="najnovije-vesti">Najnovije vesti</p>
 
     <div id="clanci" class="row"> 
       
@@ -168,12 +171,12 @@
         <span class="close_form">&times;</span>
         <h3>Prijavi se za Newsletter</h3><br>
 
-        <div class="container forms">
+        <div class="container">
           <input type="text" id="fname" name="firstname" placeholder="Ime i prezime">
           <input type="email" id="mail" name="email" placeholder="Email adresa">
         </div>
     
-        <div class="container sub">
+        <div class="container">
           <input type="submit" value="Prijavi se">
         </div>
       </div>
